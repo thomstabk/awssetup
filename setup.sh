@@ -41,3 +41,8 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+# TG additions for own system
+# install ruby and raisl
+cd $HOME
+\curl -L https://get.rvm.io | bash -s stable --rails --ruby=1.9.3
+
