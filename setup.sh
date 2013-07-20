@@ -46,3 +46,6 @@ ln -sf dotfiles/.emacs.d .
 cd $HOME
 \curl -L https://get.rvm.io | bash -s stable --rails --ruby=1.9.3
 
+#install heroku toolbelt
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
