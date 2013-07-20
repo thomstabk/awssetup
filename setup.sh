@@ -41,6 +41,7 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+#############################
 # TG additions for own system
 # install ruby and raisl
 cd $HOME
@@ -49,3 +50,7 @@ cd $HOME
 #install heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
+#Configure GIT
+git config --global color.ui true
+git config -- global user.name "Thomstabk"
+git config --global user.email tgoerner@gmail.com
