@@ -43,9 +43,13 @@ ln -sf dotfiles/.emacs.d .
 
 #############################
 # TG additions for own system
-# install ruby and raisl
+# install ruby, gems and rails
 cd $HOME
 \curl -L https://get.rvm.io | bash -s stable --rails --ruby=1.9.3
+gem update
+
+#install mysql
+sudo apt-get install mysql-client-core-5.5
 
 #install heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
