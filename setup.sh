@@ -62,3 +62,4 @@ git config --global user.email tgoerner@gmail.com
 # Load nvm and install latest production node
 source $HOME/.nvm/nvm.sh
 nvm use v0.10.12
+npm install express
