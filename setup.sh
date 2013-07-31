@@ -58,3 +58,7 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 git config --global color.ui true
 git config -- global user.name "Thomstabk"
 git config --global user.email tgoerner@gmail.com
+
+# Load nvm and install latest production node
+source $HOME/.nvm/nvm.sh
+nvm use v0.10.12
