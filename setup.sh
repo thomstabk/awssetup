@@ -26,21 +26,6 @@ sudo apt-add-repository -y ppa:cassou/emacs
 sudo apt-get update
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
-# Load NGINX Server
-sudo apt-get update
-sudo apt-get install nginx
-ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
-
-#Install MYSQL
-sudo apt-get install mysql-server
-sudo mysql_install_db
-sudo mysql_secure_installation
-
-#Install PHP
-sudo apt-get install php5-fpm php5-mysql
-#edit all PHP Settings as described here https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04
-
-
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
@@ -58,13 +43,17 @@ ln -sf dotfiles/.emacs.d .
 
 #############################
 # TG additions for own system
+
+# Install LAMP Server
+sudo apt-get install lamp-server^
+
 # install ruby, gems and rails
-cd $HOME
-\curl -L https://get.rvm.io | bash -s stable --rails --ruby=1.9.3
-gem update
+#cd $HOME
+#\curl -L https://get.rvm.io | bash -s stable --rails --ruby=1.9.3
+#gem update
 
 #install mysql
-sudo apt-get install mysql-client-core-5.5
+#sudo apt-get install mysql-client-core-5.5
 
 #install heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
