@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 setup.git
 =========
 Clone and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
@@ -9,7 +8,7 @@ follows:
 cd $HOME
 sudo apt-get install -y git-core
 git clone https://github.com/thomstabk/awssetup.git
-./setup/setup.sh   
+./awssetup/setup.sh   
 ```
 
 See also http://github.com/startup-class/dotfiles and
@@ -20,7 +19,3 @@ for more details.
 
 
 
-=======
-awssetup
-========
->>>>>>> adff5780b01b6055ce8ed743d2a35c37451805ef
