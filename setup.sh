@@ -55,6 +55,19 @@ sudo apt-get install lamp-server^
 #install mysql
 #sudo apt-get install mysql-client-core-5.5
 
+#GEt R and R Studio
+sudo apt-get update
+
+dd if=/dev/zero of=/swapfile bs=1024 count=512k  #Setup memory swap files
+mkswap /swapfile
+swapon /swapfile
+
+sudo apt-get install gdebi-core
+sudo apt-get install libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/rstudio-server-0.98.978-i386.deb
+sudo gdebi rstudio-server-0.98.978-i386.deb
+
+
 #install heroku toolbelt
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
@@ -67,3 +80,7 @@ git config --global user.email tgoerner@gmail.com
 source $HOME/.nvm/nvm.sh
 nvm use v0.10.12
 npm install express
+
+#flush cache
+free -m
+sync; echo 3 > /proc/sys/vm/drop_caches
